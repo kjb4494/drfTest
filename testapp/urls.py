@@ -3,8 +3,9 @@ from rest_framework import routers
 from testapp import views
 
 router = routers.DefaultRouter()
-router.register('users', views.UserViewSet)
-router.register('groups', views.GroupViewSet)
+# router.register('users', views.UserViewSet)
+# router.register('groups', views.GroupViewSet)
+router.register('users', views.CmbUserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
